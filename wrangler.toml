@@ -1,0 +1,23 @@
+name = "memos-worker"
+compatibility_date = "2025-08-19"
+main = "src/index.js"
+[assets]
+directory = "./src/public"
+run_worker_first = [
+	"/api/*"
+]
+
+[[d1_databases]]
+binding = "DB"
+database_id = "bf6483d9-e4fb-4fd0-9cee-a5bce672521e"
+database_name = "notes-db"
+
+[[kv_namespaces]]
+binding = "NOTES_KV"
+id = "0714d2243dc64a97ae5b826f10e2acee"
+# preview_id = ""
+
+[[r2_buckets]]
+binding = "NOTES_R2_BUCKET"
+bucket_name = "notes-r2-bucket"
+# preview_bucket_name = "notes-files-preview"
